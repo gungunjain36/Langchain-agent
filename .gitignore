@@ -1,0 +1,63 @@
+# Environment Variables
+.env
+
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.env/
+.venv/
+
+# Logs and Debug Files
+logs/
+*.log
+debug.log
+
+# Dependency Caches
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
+
+# IDE and Editor Settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python Cache and Compiled Files
+*.sqlite3
+db.sqlite3
+__pycache__/
+*.py[cod]
+*$py.class
+
+# API Keys & Security
+config/settings.py  # (Only if it contains sensitive info)
+data/chat_history.json  # (Optional, if you don’t want to store chat history)
+
+# FastAPI and Uvicorn Artifacts
+*.pid
+*.sock
+*.db
+instance/
+
+# Node.js (If you use Next.js for frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+# Docker (If you add Docker support)
+docker-compose.override.yml
+Dockerfile
