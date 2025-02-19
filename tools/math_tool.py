@@ -1,13 +1,16 @@
 from langchain.tools import Tool
 
-@Tool
-def calculator(expression: str) -> float:
-    """
-    Calculate a mathematical expression
-    """
+def calculate_math(expression: str) -> str:
+    """Evaluates a mathematical expression."""
     try:
-        return eval(expression)
+        result = eval(expression)  # ⚠️ Be cautious with `eval`, use `sympy` for safer evaluation.
+        return str(result)
     except Exception as e:
-        return str(e)
-    
-math_tool = calculator
+        return f"Error: {str(e)}"
+
+# ✅ Define tool correctly
+math_tool = Tool(
+    name="Calculator",
+    func=calculate_math,
+    description="Use this tool to solve mathematical expressions. Example: '2+2' or 'sqrt(16)'."
+)

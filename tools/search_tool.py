@@ -1,8 +1,8 @@
-from langchain_community.tools import SerpAPIWrapper
+from langchain_community.utilities import SerpAPIWrapper
 from langchain_community.tools import Tool
-from config.settings import SERP_API_KEY
+from config.settings import SERPAPI_API_KEY
 
-search = SerpAPIWrapper(api_key=SERP_API_KEY)
+search = SerpAPIWrapper(serpapi_api_key=SERPAPI_API_KEY)
 
 search_tool = Tool(
     name = "google_search",
